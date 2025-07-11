@@ -1,0 +1,195 @@
+/* Gaya Asas */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #0056b3;
+    margin: 0;
+}
+
+/* Gaya Kad untuk setiap seksyen */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Gaya Butang */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-primary { background-color: #007bff; color: white; }
+.btn-primary:hover:not(:disabled) { background-color: #0056b3; }
+
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-secondary:hover:not(:disabled) { background-color: #5a6268; }
+
+.btn-success { background-color: #28a745; color: white; }
+.btn-success:hover:not(:disabled) { background-color: #218838; }
+
+.btn-danger { background-color: #dc3545; color: white; }
+.btn-danger:hover:not(:disabled) { background-color: #c82333; }
+
+.btn-warning { background-color: #ffc107; color: #212529; }
+.btn-warning:hover:not(:disabled) { background-color: #e0a800; }
+
+.btn-info { background-color: #17a2b8; color: white; }
+.btn-info:hover:not(:disabled) { background-color: #138496; }
+
+
+/* Gaya Spesifik Seksyen */
+#nomination-setup {
+    display: flex;
+    flex-direction: column;
+}
+
+#candidate-name-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.counts-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#objection-count {
+    color: #dc3545;
+}
+
+#objection-status-display {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 5px;
+}
+
+#action-buttons-container {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+}
+#action-buttons-container p {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#mc-announcement-display {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    min-height: 80px;
+    border-radius: 5px;
+    font-style: italic;
+    color: #555;
+    white-space: pre-wrap;
+}
+
+textarea#mc-manual-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: 60px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.reset-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Reka Bentuk Responsif */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .counts-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pengurusan Pencalonan & Undian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Sistem Pengurusan Pencalonan & Undian Jawatankuasa</h1>
+        </header>
+
+        <main>
+            <!-- SEKSYEN STATUS SEMASA -->
+            <section class="status-section card">
+                <h2>Status Semasa</h2>
+                <div id="current-candidate-display">
+                    <strong>Calon Dicadangkan:</strong> <span>Tiada</span>
+                </div>
+                <div class="counts-container">
+                    <div id="support-count-display">
+                        <strong>Sokongan Pencalonan:</strong> <span class="count" id="support-count">0</span>
+                    </div>
+                    <div id="objection-count-display">
+                        <strong>Sokongan Bantahan:</strong> <span class="count" id="objection-count">0</span>
+                    </div>
+                </div>
+                 <div id="objection-status-display" class="hidden">
+                    <strong>Status Bantahan:</strong> <span>Satu usul bantahan telah dikemukakan.</span>
+                </div>
+            </section>
+
+            <!-- SEKSYEN KAWALAN PROSES -->
+            <section class="control-section card">
+                <h2>Kawalan Proses (Emcee)</h2>
+                <!-- Langkah 1: Mula Pencalonan -->
+                <div id="nomination-setup">
+                    <label for="candidate-name-input">Masukkan Nama Calon:</label>
+                    <input type="text" id="candidate-name-input" placeholder="Nama Penuh Calon">
+                    <button id="start-nomination-btn" class="btn btn-primary">Buka Pencalonan</button>
+                </div>
+                <hr>
+                <!-- Langkah 2: Picu Interaksi Ahli Majlis -->
+                <button id="mc-trigger-btn" class="btn btn-secondary" disabled>Ahli Majlis Mengangkat Tangan</button>
+                
+                <!-- Langkah 3: Pilihan untuk MC (Dinamik) -->
+                <div id="action-buttons-container" class="hidden">
+                    <p>Pilih tindakan ahli majlis:</p>
+                    <button id="support-nomination-btn" class="btn btn-success">Sokong Pencalonan</button>
+                    <button id="propose-objection-btn" class="btn btn-info">Usul Bantahan</button>
+                    <button id="support-objection-btn" class="btn btn-danger hidden">Sokong Bantahan</button>
+                </div>
+            </section>
+            
+            <!-- SEKSYEN PENGUMUMAN MC -->
+            <section class="announcement-section card">
+                <h2>Pengumuman Emcee</h2>
+                <div id="mc-announcement-display">
+                    Selamat datang! Sila mulakan dengan memasukkan nama calon.
+                </div>
+                <textarea id="mc-manual-input" placeholder="MC boleh taip pengumuman tambahan di sini..."></textarea>
+                <button id="submit-mc-manual-btn" class="btn btn-primary">Hantar Pengumuman Manual</button>
+            </section>
+            
+            <!-- SEKSYEN TETAPAN SEMULA -->
+            <section class="reset-section">
+                <button id="reset-btn" class="btn btn-warning">Tetapkan Semula (Reset) Keseluruhan Proses</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
