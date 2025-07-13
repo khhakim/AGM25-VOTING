@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDisplay();
         actionButtonsContainer.classList.add('hidden');
         if (!checkForResult()) {
-            updateMcAnnouncement(`Satu sokongan bantahan telah diterima. Ada mana mana ahli majlis yang ingin menyokong atau membantah pencalonan tersebut? Kiraan semasa, ${state.supportCount} sokongan, dan ${state.objectionCount} sokongan bantahan.`);
+            updateMcAnnouncement(`Satu sokongan bantahan telah diterima. Ada mana mana ahli majlis yang ingin menyokong atau menyokong pembantahan pencalonan tersebut? Kiraan semasa, ${state.supportCount} sokongan, dan ${state.objectionCount} sokongan bantahan.`);
             mcTriggerBtn.disabled = false;
         }
     });
