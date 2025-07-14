@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.isNominationActive = true;
         updateDisplay();
         
-        updateMcAnnouncement(`Terima kasih saudara/saudari atas pencalonan tersebut. Pencalonan memerlukan 2 sokongan untuk diterima. Ada ahli majlis ingin menyokong pencalonan ini?`);
+        updateMcAnnouncement(`Terima kasih saudara/saudari atas pencalonan tersebut. Pencalonan ini memerlukan 2 sokongan untuk diterima. Ada ahli majlis ingin menyokong pencalonan ini?`);
         
         candidateNameInput.disabled = true;
         startNominationBtn.disabled = true;
