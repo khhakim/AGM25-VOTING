@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDisplay();
         actionButtonsContainer.classList.add('hidden');
         if (!checkForResult()) {
-            updateMcAnnouncement(`Satu sokongan pencalonan telah diterima. Kiraan semasa, ${state.supportCount} sokongan, dan ${state.objectionCount} sokongan bantahan.`);
+            updateMcAnnouncement(`Terima kasih saudari/saudari atas sokongan tersebut. Untuk pencalonan ini diterima, kami memerlukan lagi, ${state.supportCount} sokongan, dan ${state.objectionCount} sokongan bantahan.`);
             mcTriggerBtn.disabled = false;
         }
     });
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDisplay();
         actionButtonsContainer.classList.add('hidden');
         if (!checkForResult()) {
-            updateMcAnnouncement(`Satu sokongan bantahan telah diterima. Ada mana mana ahli majlis yang ingin menyokong atau menyokong pembantahan pencalonan tersebut? Kiraan semasa, ${state.supportCount} sokongan, dan ${state.objectionCount} sokongan bantahan.`);
+            updateMcAnnouncement(`Satu sokongan bantahan telah diterima. Ada mana mana ahli majlis yang ingin menyokong atau menyokong pembantahan pencalonan tersebut? Kiraan semasa, ${2-state.supportCount} sokongan, dan ${2-state.objectionCount} sokongan bantahan.`);
             mcTriggerBtn.disabled = false;
         }
     });
